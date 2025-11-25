@@ -3,29 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VadimkaOS</title>
-    <link rel="stylesheet" href="style.css">
+    <title>VadimkaOS — Terminal</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background: #000;
+            margin: 0;
+            font-family: 'JetBrains Mono', monospace;
+            color: #00ff66;
+            padding: 25px;
+        }
+
+        .terminal {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .header {
+            font-size: 20px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #00ff66;
+            padding-bottom: 10px;
+        }
+
+        .line {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .cmd {
+            color: #00ff66;
+        }
+
+        .section-title {
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #00ff66;
+        }
+
+        a {
+            color: #00ff66;
+            text-decoration: none;
+            border-bottom: 1px dotted #00ff66;
+        }
+
+        a:hover {
+            color: #000;
+            background: #00ff66;
+        }
+
+        .qr-desktop {
+            margin-top: 20px;
+        }
+
+        .qr-desktop img {
+            width: 180px;
+            height: 180px;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 18px;
+        }
+
+        .cursor {
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%,50% { opacity: 1; }
+            50.01%,100% { opacity: 0; }
+        }
+
+        /* Скрыть QR-код на мобильных устройствах */
+        @media (max-width: 700px) {
+            .qr-desktop {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
 
 <div class="terminal">
 
-    <h1 class="title">vadimka@site:~$ ./about</h1>
-
-    <p class="line">➜ Добро пожаловать на минимальную страницу.</p>
-    <p class="line">➜ Telegram канал:</p>
-
-    <a class="terminal-link" href="https://t.me/+1ovAt8bwLIVmMjUy" target="_blank">
-        Открыть Telegram
-    </a>
-
-    <!-- QR – показывается только на ПК -->
-    <div class="qr-desktop">
-        <img src="qr.png" alt="QR to Telegram" class="qr">
-        <p class="qr-caption">Сканируй, если зашел с ПК.</p>
+    <div class="header">
+        <span class="cmd">vadimka@site:~$</span> ./about
     </div>
 
-    <p class="footer">vadimka@site:~$ <span class="cursor">█</span></p>
+    <div class="line">➜ Я — Vadimka. Инженер-самоучка, разработчик систем автоматизации и робототехники.</div>
+    <div class="line">➜ Построил EasyArmOS, свою ОС для манипулятора и автоматизации 3D-печати.</div>
+    <div class="line">➜ Создаю Telegram WebApp игры, TapGameStudio и работаю над собственным ИИ.</div>
+
+    <div class="section-title">projects/</div>
+
+    <div class="line">• <b>EasyArmOS</b> — полная ОС для роботоманипулятора на Raspberry Pi.</div>
+    <div class="line">• <b>AutoPrint Platform</b> — замена магнитных столов Bambu Lab через механизм захвата + ИИ.</div>
+    <div class="line">• <b>TapGameStudio</b> — WebApp-конструктор Telegram игр.</div>
+    <div class="line">• <b>Bobr Evolution</b> — мой игровой мини-апп.</div>
+    <div class="line">• <b>VadimkaAI</b> — локальный ИИ на LLaMA + FastAPI.</div>
+
+    <div class="section-title">philosophy/</div>
+
+    <div class="line">"Если чего-то не существует — я делаю сам."</div>
+
+    <div class="section-title">contact/</div>
+
+    <div class="line">Telegram: <a href="https://t.me/+1ovAt8bwLIVmMjUy" target="_blank">@channel</a></div>
+
+    <div class="qr-desktop">
+        <img src="qr.png" alt="QR to Telegram">
+        <div class="line" style="color:#777; font-size:14px;">Сканируй, если зашел с ПК.</div>
+    </div>
+
+    <div class="footer">
+        <span class="cmd">vadimka@site:~$</span> <span class="cursor">█</span>
+    </div>
 
 </div>
 
