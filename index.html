@@ -9,39 +9,49 @@
 <body>
 
 <div class="terminal">
+
     <div class="header">
         <span class="green">vadimka@site:~$</span> ./about
     </div>
 
     <div class="content">
-        <p class="line"><span class="green">➜</span> Привет. Это минимальный персональный сайт в терминальном стиле.</p>
-        <p class="line"><span class="green">➜</span> Здесь можно следить за моими проектами и обновлениями.</p>
-        <p class="line"><span class="green">➜</span> Главный проект сейчас активно разрабатывается.</p>
 
-        <br>
-
-        <p class="line"><span class="green">➜</span> Мой Telegram-канал:</p>
+        <p class="line"><span class="green">➜</span> Минимальный терминальный сайт. Следи за обновлениями.</p>
+        <p class="line"><span class="green">➜</span> Мой Telegram:</p>
 
         <a class="terminal-button" href="https://t.me/+1ovAt8bwLIVmMjUy" target="_blank">
             Открыть Telegram
         </a>
 
         <br><br>
-        <p class="line"><span class="green">➜</span> QR-код:</p>
 
-        <div class="qr-container">
-            <img src="qr.png" alt="QR">
+        <p class="line"><span class="green">➜</span> Генератор QR-кодов:</p>
+
+        <div class="qr-gen">
+            <input id="qr-input" type="text" placeholder="Введите ссылку..." value="https://t.me/+1ovAt8bwLIVmMjUy">
+            <button id="qr-generate">Generate</button>
         </div>
 
-        <br>
+        <div id="qr-output"></div>
 
+        <button id="qr-download" class="terminal-button" style="display:none;">
+            Скачать QR
+        </button>
+
+        <br><br>
         <p class="line small">Страница в активной разработке.</p>
+
     </div>
 
     <div class="footer">
         vadimka@site:~$ <span class="cursor">█</span>
     </div>
+
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+
+<script src="script.js"></script>
 
 </body>
 </html>
