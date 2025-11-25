@@ -42,9 +42,32 @@ body {
     color: #000;
 }
 
-.qr-container {
+.qr-gen {
     margin-top: 10px;
-    text-align: left;
+    display: flex;
+    gap: 10px;
+}
+
+.qr-gen input {
+    flex: 1;
+    padding: 10px;
+    background: #000;
+    border: 1px solid #00ff66;
+    color: #00ff66;
+    font-family: "JetBrains Mono";
+}
+
+.qr-gen button {
+    border: 1px solid #00ff66;
+    background: #000;
+    color: #00ff66;
+    padding: 10px;
+    cursor: pointer;
+    font-family: "JetBrains Mono";
+}
+
+#qr-output {
+    margin-top: 20px;
 }
 
 .qr-container img {
@@ -66,22 +89,8 @@ body {
     50.01%,100% { opacity: 0; }
 }
 
-/* MOBILE */
 @media (max-width: 600px) {
-    .terminal {
-        padding: 12px;
-    }
-
-    .line {
-        font-size: 14px;
-    }
-
-    .header {
-        font-size: 16px;
-    }
-
-    .qr-container img {
-        width: 140px;
-        height: 140px;
-    }
+    .terminal { padding: 12px; }
+    .line { font-size: 14px; }
+    .header { font-size: 16px; }
 }
