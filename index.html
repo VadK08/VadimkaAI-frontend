@@ -3,55 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vadimka — Terminal</title>
+    <title>VadimkaOS</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="terminal">
 
-    <div class="header">
-        <span class="green">vadimka@site:~$</span> ./about
+    <h1 class="title">vadimka@site:~$ ./about</h1>
+
+    <p class="line">➜ Добро пожаловать на минимальную страницу.</p>
+    <p class="line">➜ Telegram канал:</p>
+
+    <a class="terminal-link" href="https://t.me/+1ovAt8bwLIVmMjUy" target="_blank">
+        Открыть Telegram
+    </a>
+
+    <!-- QR – показывается только на ПК -->
+    <div class="qr-desktop">
+        <img src="qr.png" alt="QR to Telegram" class="qr">
+        <p class="qr-caption">Сканируй, если зашел с ПК.</p>
     </div>
 
-    <div class="content">
-
-        <p class="line"><span class="green">➜</span> Минимальный терминальный сайт. Следи за обновлениями.</p>
-        <p class="line"><span class="green">➜</span> Мой Telegram:</p>
-
-        <a class="terminal-button" href="https://t.me/+1ovAt8bwLIVmMjUy" target="_blank">
-            Открыть Telegram
-        </a>
-
-        <br><br>
-
-        <p class="line"><span class="green">➜</span> Генератор QR-кодов:</p>
-
-        <div class="qr-gen">
-            <input id="qr-input" type="text" placeholder="Введите ссылку..." value="https://t.me/+1ovAt8bwLIVmMjUy">
-            <button id="qr-generate">Generate</button>
-        </div>
-
-        <div id="qr-output"></div>
-
-        <button id="qr-download" class="terminal-button" style="display:none;">
-            Скачать QR
-        </button>
-
-        <br><br>
-        <p class="line small">Страница в активной разработке.</p>
-
-    </div>
-
-    <div class="footer">
-        vadimka@site:~$ <span class="cursor">█</span>
-    </div>
+    <p class="footer">vadimka@site:~$ <span class="cursor">█</span></p>
 
 </div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
-
-<script src="script.js"></script>
 
 </body>
 </html>
