@@ -6,73 +6,57 @@ body {
 }
 
 .terminal {
-    max-width: 900px;
+    max-width: 800px;
     margin: auto;
-    padding: 20px;
+    padding: 25px;
 }
 
-.header {
+.title {
     border-bottom: 1px solid #00ff66;
-    padding-bottom: 10px;
+    padding-bottom: 12px;
     margin-bottom: 20px;
-    font-size: 18px;
 }
 
 .line {
     font-size: 16px;
-    margin: 6px 0;
+    margin: 8px 0;
 }
 
-.green {
+.terminal-link {
     color: #00ff66;
-}
-
-.terminal-button {
-    display: inline-block;
     border: 1px solid #00ff66;
-    padding: 10px 14px;
-    color: #00ff66;
+    padding: 10px 16px;
     text-decoration: none;
-    font-size: 16px;
-    margin-top: 10px;
+    display: inline-block;
+    margin: 10px 0;
 }
 
-.terminal-button:hover {
+.terminal-link:hover {
     background: #00ff66;
     color: #000;
 }
 
-.qr-gen {
-    margin-top: 10px;
-    display: flex;
-    gap: 10px;
-}
-
-.qr-gen input {
-    flex: 1;
-    padding: 10px;
-    background: #000;
-    border: 1px solid #00ff66;
-    color: #00ff66;
-    font-family: "JetBrains Mono";
-}
-
-.qr-gen button {
-    border: 1px solid #00ff66;
-    background: #000;
-    color: #00ff66;
-    padding: 10px;
-    cursor: pointer;
-    font-family: "JetBrains Mono";
-}
-
-#qr-output {
+.qr-desktop {
     margin-top: 20px;
+    text-align: center;
 }
 
-.qr-container img {
-    width: 160px;
-    height: 160px;
+.qr {
+    width: 180px;
+    height: 180px;
+}
+
+.qr-caption {
+    margin-top: 8px;
+    color: #777;
+    font-size: 14px;
+}
+
+/* скрыть QR на телефонах */
+@media (max-width: 700px) {
+    .qr-desktop {
+        display: none;
+    }
 }
 
 .footer {
@@ -85,12 +69,6 @@ body {
 }
 
 @keyframes blink {
-    0%, 50% { opacity: 1; }
-    50.01%,100% { opacity: 0; }
-}
-
-@media (max-width: 600px) {
-    .terminal { padding: 12px; }
-    .line { font-size: 14px; }
-    .header { font-size: 16px; }
+    0%,50% {opacity:1;}
+    50.01%,100% {opacity:0;}
 }
